@@ -1,0 +1,81 @@
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .ticker {
+
+        font-size: 0.7em;
+    }
+
+
+    .heroContent {
+
+        margin: 10 auto;
+        text-align: center;
+        /* padding:0 5.1em; */
+        width: 90%;
+    }
+
+    .heroContent ul li {
+
+        display: inline;
+        text-align: center;
+        padding: 0 0.5em;
+
+
+
+    }
+
+    .heroContent ul li a {
+
+        text-decoration: none;
+        color: #707070;
+        font-size: 0.8rem;
+        font-weight: 700;
+
+
+    }
+
+    .heading{
+
+        /* background-color: yellow; */
+        width: 100%;
+       
+        padding-top: 0.9em;
+        color:#707070;
+        /* background-color: white; */
+      
+        
+    }
+
+    .title{
+
+        font-size: 1.2rem;
+        font-weight: 700;
+    
+    }
+    .introduction {
+
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+        
+    }
+    .content {
+    
+        margin: 1.5em auto;
+        text-align: center;
+        /* padding:0 5.1em; */
+        width: 100%;
+        /* background-color: turquoise; */
+    }
+   
+
+    .gallery {
+        /* 
+            background-color: yellow; */
+        width: 100%;
+        margin: 4rem auto;
+    }
+
+    
+}

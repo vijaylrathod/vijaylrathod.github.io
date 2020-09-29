@@ -1,0 +1,144 @@
+@media only screen and (min-width: 992px) {
+
+    .ticker {
+
+        font-size: 2.8em;
+    }
+
+
+    nav {
+
+        padding-top: 2em;
+
+
+
+    }
+
+    nav ul li {
+
+        display: inline;
+        text-align: left;
+        padding-left: 1em;
+
+
+
+    }
+
+    nav ul li a, p {
+
+        color: #707070;
+        text-decoration: none;
+        font-weight: 500;
+        font-size:0.9em;
+    
+    }
+    
+
+    .heroContent {
+
+        margin: 4em auto;
+        text-align: center;
+        /* padding:0 5.1em; */
+        width: 90%;
+    }
+
+
+    .heroContent>h1 {
+
+        font-size: 1.9rem;
+        text-align: center;
+        font-weight: 700;
+
+
+    }
+
+    .heroContent>p {
+
+        font-size: 0.9rem;
+        padding-top: 2.5em;
+        font-weight: 500;
+
+
+    }
+
+    .heroContent ul li {
+
+        display: inline;
+        text-align: center;
+        padding: 0.2em 0.3em;
+
+
+
+    }
+
+    .heroContent ul li a {
+
+
+        font-size: 0.9rem;
+        font-weight: 700;
+
+
+    }
+    
+    .heading{
+
+        /* background-color: yellow; */
+        width: 100%;
+        
+     
+        color:#707070;
+        /* background-color: white; */
+      
+        
+    }
+
+    .title{
+
+        font-size: 1.2em;
+        font-weight: 700;
+    
+    }
+    .introduction {
+        margin-top:1rem;
+        font-size: 0.9em;
+        font-weight: 500;
+        text-align: left;
+       
+       
+        
+    }
+    .projectItem .information .projectTitle{
+
+        font-size: 1.2em;
+        font-weight: 700;
+       
+        }
+     .projectItem .information .projectSubtitle{
+    
+     font-size: 0.9em;
+     font-weight: 500;
+    
+     }
+
+    
+    .content {
+    
+        margin: 1.5em auto;
+        text-align: center;
+        /* padding:0 5.1em; */
+        width: 100%;
+        /* background-color: turquoise; */
+    }
+    .content>p{
+    
+        text-align: left;
+    }
+
+    .gallery {
+      
+        width: 100%;
+        margin: 3rem auto;
+    }
+  
+
+}
