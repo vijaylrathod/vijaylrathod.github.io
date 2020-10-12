@@ -2,9 +2,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap'); */
 
-::-webkit-scrollbar {
-    display: none;
-}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,25 +19,61 @@
 html {
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    overscroll-behavior: none;
+  
     
   
     
 }
 body {
 
-    height: 100vh;
+    
     font-family: 'Poppins', sans-serif;
    
     /* font-family: 'Montserrat', sans-serif; */
     /* font-family: 'Open Sans', sans-serif; */
-    background: url('../assets/noise.png');
-    background-color: #FCFCFC;
-    animation: grain .5s steps(10) infinite;
+    width: 100%;
+    height: 100%;
+  
 
 
 }
+
+.mask:before{
+
+   
+        content:"";
+        position: fixed;
+        
+        width: 100%;
+        height: calc(100% + 3rem);
+        left: 0%;
+        top: 0%;
+        background: url('../assets/noise.png');
+        background-color: #FCFCFC;
+        animation: grain .5s steps(10) infinite;
+        z-index:-1;
+}
+
+.player:before{
+
+   
+    content:"";
+    position: fixed;
+    
+    width: calc(100% + 3rem);
+    height: calc(100% + 3rem);
+    left: 0%;
+    top: 0%;
+    background: url('../assets/noise.png');
+    background-color: #2e2e2e;
+  
+
+    animation: grain .5s steps(10) infinite;
+    z-index: -1;
+}
+
+
+
 a {
     outline: none;
     color: inherit;
@@ -48,10 +82,11 @@ a {
 img,
 video {
     width: 100%;
-    height: auto;
+    height: 100%;
     border: none;
     display: block;
     user-select: none;
+    outline: none;
 }
 
 
@@ -76,6 +111,19 @@ video {
     animation: grain 2s steps(10) infinite
 }
 
+
+.clipAnimation{
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-color: #FFF6ED;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+
+}
 @keyframes grain {
 
     0% {
@@ -131,7 +179,6 @@ animation-iteration-count: infinite; */
 }
 
 /* loader style ends here*/
-
 
 
 
@@ -761,36 +808,235 @@ nav p::after {
 }
 
 
+
+
+
 /* Project specifics grid item style ends here*/
 
+
+/* Inner page style goes here*/
+
+
+.is-black{
+
+    background-color: black;
+}
+.i-nav{
+
+    width: 88vw;
+    margin: auto; 
+    /* position: fixed;
+    top:0;
+    left:0;
+    z-index:9999; */
+    padding-top: 2rem;
+    color:white;
+}
+.i-nav {
+
+    width: 88vw;
+    margin: auto; 
+    /* position: fixed;
+    top:0;
+    left:0;
+    z-index:9999; */
+    padding-top: 2rem;
+  
+   
+}
+.i-nav ul  {
+    display: flex;   
+
+}
+.i-nav ul li:nth-of-type(2){
+   
+    margin-left: auto;
+    padding-left: 3rem;
+
+}
+.i-nav ul li:nth-of-type(3){
+
+     
+    padding-left: 3rem;
+
+}
+.i-nav ul li a {
+
+    font-size:1rem;
+    font-weight: 500;   
+
+}
+
+
+/* Video is styled here.*/
+.heroContentContainer{
+
+  
+    width: 88vw;
+    height:auto;
+  
+    margin:1.0rem auto;
+    background-color: black;
+    color:white;
+    
+    
+
+}
+.i-video{
+
+    position: relative;
+    width: 100%;
+    height: 50%;
+
+   
+   
+    padding-top:1rem;
+   
+  
+
+}
+
+
+
  
+ /* Project Description is styled here.*/
 
-/* Home page style ends here*/
+.i-container{
+
+    width: 88vw;
+    margin: 2.5rem auto;
+    color:white
+    /* background-color: yellow; */
+}
+.i-line {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+
+}
+
+.i-projectDetails{
+
+    width: 50%;
+   
+    /* background-color: red; */
+    display: flex;
+    
+    flex:row wrap;
+    justify-content: space-between;
+    color:white;
+   
+   
+
+}
 
 
+.i-detail{
 
-/* Animation Details*/
+    padding-top: 1rem;
+}
 
-/* Mouse over underline*/
+.i-detail > p {
+
+   color:white;
+}
+
+.i-content{
+
+    width: 80%;
+    /* background-color: red; */
+    margin-top: 1.5rem;
+    color:white;
+ 
+}
+.i-title{
+
+    font-size: 1.2rem;
+    color:white;
+}
+.i-description{
+        
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color:white;
+}
+.i-description > p{
+        
+
+    color:white;
+  }
+  
+.i-footerContainer{
+    width:88vw;
+    margin: auto;
+    position: relative;
+    color:white;
+}
+
+.i-footerContent{
+
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    margin: 3.0rem 0;
+    font-weight: 500;
+   
+}
+
+.i-footerContent  ul li{
+    display: inline;
+    text-align: left;
+    padding-right:2rem;
+  
+}
+
+.i-backToTop{
+
+    text-decoration: underline;
+    color:white;
+}
+
+/* Clip path animaton*/
+/* =Clip-path transition */
+.clip-leave {
+    opacity: 1;
+}
+
+.clip-leave-active
+ {
+    transition: opacity 0.2s ease-out;
+}
+
+.clip-leave-to {
+    opacity: 0;
+}
+
+.clip-enter {
+    clip-path: circle(0%);
+
+ 
+    
+}
 
 
+.clip-enter-active {
+    transition: all 1s ease;
+    position: absolute;
+  
+    top: 50%;
+    right:0;
+    left:0;
+    z-index: 2;
+   
+}
 
+.clip-enter-to {
+    clip-path: circle(75%);
+    /* clip-path: inset(0); */
+    
 
-
-
-
-/* All media queries starts here*/
-
-
-
-
-
-
-
-
-
-
-/* Large devices (laptops/desktops, 992px and up) */
-
-
+    
+    
+}
 
