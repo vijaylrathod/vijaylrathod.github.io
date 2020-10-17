@@ -2,28 +2,45 @@
 
 @media only screen and (max-width: 600px) {
 
+    .player:before{
+
+   
+        content:"";
+        position: fixed;
+        
+        width: 100%;
+        height: calc(100% + 3rem);
+        left: 0%;
+        top: 0%;
+        background: url('../assets/noise.png');
+        background-color: #2e2e2e;
+      
+    
+        animation: grain .5s steps(10) infinite;
+        z-index: -1;
+    }
     
 
-    nav ul li:nth-of-type(2){
+    .i-nav ul li:nth-of-type(2){
    
         margin-left: auto;
         padding-left: 3rem;
     
     }
-    nav ul li:nth-of-type(3){
+    .i-nav ul li:nth-of-type(3){
     
          
         padding-left: 1rem;
     
     }
-    nav ul li a {
+    .i-nav ul li a {
     
         font-size:0.9em;
         font-weight: 500;   
     
     }
 
-    .projectDetails{
+    .i-projectDetails{
 
         width: 100%;
     
@@ -38,19 +55,19 @@
     
     }
    
-    .detail{
+    .i-detail{
 
         padding-top: 1rem;
     }
    
-    .detail >h2 {
+    .i-detail >h2 {
     
         font-size: 1em;
            
     
     }
 
-    .detail >p {
+    .i-detail >p {
     
        
         font-size: 0.8em;
@@ -58,13 +75,13 @@
     
     }
 
-    .content{
+    .i-content{
 
         width: 100%;
         margin-top: 2rem;
     }
 
-    .title{
+    .i-title{
 
         font-size: 1rem;
     }
@@ -76,13 +93,13 @@
     }
     
     
-    .footerContainer{
+    .i-footerContainer{
         width:88vw;
         margin: auto;
         position: relative;
     }
     
-    .footerContent{
+    .i-footerContent{
     
         display: flex;
         justify-content: space-between;
@@ -92,7 +109,7 @@
        
     }
 
-    .footerContent  ul li{
+    .i-footerContent  ul li{
         display: block;
         
       
