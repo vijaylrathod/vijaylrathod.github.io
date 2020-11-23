@@ -41,45 +41,12 @@ function loaderAway() {
 }
 
 
-function pageTransition() {
-  var tl = gsap.timeline();
-  console.log("Page transition function called");
 
-  tl.to(".transition li", {
-      duration: 0.5,
-      scaleY: 1,
-      transformOrigin: "bottom left",
-      stagger: 0.2,
-  });
-
-  tl.to(".transition li", {
-      duration: 0.5,
-      scaleY: 0,
-      transformOrigin: "bottom left",
-      stagger: 0.1,
-      delay: 0.1,
-  });
-}
 // scroll to the top of the page
 barba.hooks.before(() => {
     window.scrollTo(0, 0);
 });
-// barba.init({
-//     transitions: [{
-//         sync:true,
-//       name: 'default-transition',
-//       leave() {
-//         // create your stunning leave animation here
-     
-      
-        
-//       },
-//       enter() {
-//         // create your amazing enter animation here
-//         pageTransition();
-//       }
-//     }]
-//   });
+
 
 barba.init({
     transitions: [{
