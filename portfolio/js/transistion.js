@@ -1,41 +1,61 @@
-// Tell Barba to use the CSS plugin
-barba.use(barbaCss);
 
-        
-barba.hooks.afterEnter((data) => {
-    gsap.to('.scroll-content',{y:0, duration:0.5, ease:Circ.easeOut});
-    console.log("Gloabal hook called");
-  });
+// reset position of the loading screen
+gsap.set(".loader", {
+    scaleX: 0,
+    rotation: 10,
+    xPercent: -5,
+    yPercent: -50,
+    transformOrigin: 'left center',
+    autoAlpha: 1
+});
 
-barba.init({
-  transitions: [
-    {
-        name: "clip",
-        from: {
-          namespace: [
-            'home'
-          ]
+function loaderIn() {
+    // GSAP tween to stretch the loading screen across the whole screen
+    return gsap.fromTo(".loader",
+        {
+            rotation: 10,
+            scaleX: 0,
+            xPercent: -5,
+           
         },
-        sync: true,
-       
-        leave() { console.log("leave method called");  
-    },
-       
-        enter() {console.log("Enter  method called");}
-    },
-    {
-      name: 'home',
-      sync: true,
-      from: { namespace: ['clip'] },
-      once() {},
-      leave() {},
-      enter() {},
-    },
+        {
+            duration: 0.8,
+           
+            xPercent: 0,
+            scaleX: 1,
+            rotation: 0,
+            ease: 'power4.inOut',
+            transformOrigin: 'left center'
+        });
+}
+function loaderAway() {
+    // GSAP tween to hide loading screen
+    return gsap.to(".loader", {
+        duration: 0.8,
+        scaleX: 0,
+        xPercent: 5,
+        rotation: -10,
+        transformOrigin: 'right center',
+        ease: 'power4.inOut'
+    });
+}
 
 
-]
+
+// scroll to the top of the page
+barba.hooks.before(() => {
+    window.scrollTo(0, 0);
 });
 
 
-
-
+barba.init({
+    transitions: [{
+        
+        async leave() {
+            await loaderIn();
+        },
+        enter() {
+            loaderAway();
+        }
+    }]
+});
